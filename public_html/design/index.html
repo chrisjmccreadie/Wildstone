@@ -6,6 +6,13 @@ if (isset($_GET["action")) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script type="text/javascript">
+function submitform()
+{
+  document.myform.submit();
+}
+</script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>::..Welcome to the Wild Stone Website..::</title>
 <link rel="stylesheet" type="text/css" href="http://projects.tekkiwebsolutions.com/harjot/Wildstone/css/main.css" media="all" />
@@ -72,7 +79,7 @@ if (isset($_GET["action")) {
     
     </div>
      <!-- Notify Me Ends from here -->
-    <a href="#" title="">Notify me</a>
+    <a href="javscript:submitform();" title="">Notify me</a>
     <?php echo $output; ?>
     
     <p><span>*</span> Don't worry, your details are safe with us.</p>
