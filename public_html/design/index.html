@@ -1,4 +1,8 @@
-
+<?php
+if (isset($_GET["action")) {
+  $output = "You will be notified soon";
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -57,8 +61,11 @@
     <div class="notify_me_L"></div>
     
     <div class="notify_me_C">
+    <form action="<?php echo $PHP_SELF; ?>">
+    <input type="hidden" name="action" value="doit">
+
      <input type="text" value="" onclick="this.value='';" onblur="this.value=!this.value?'':this.value;"/>
-    
+    </form>
     </div>
    <div class="notify_me_R"></div>
     
@@ -66,6 +73,7 @@
     </div>
      <!-- Notify Me Ends from here -->
     <a href="#" title="">Notify me</a>
+    <?php echo $output; ?>
     
     <p><span>*</span> Don't worry, your details are safe with us.</p>
     </div>
