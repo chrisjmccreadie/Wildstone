@@ -3,8 +3,8 @@ $output = 'Please enter your email for launch notification:';
 if (isset($_GET["action"])) {
   $output = "You will be notified soon";
   $email = $_GET["email"];
-  mail("tom@brandandbusiness.com",'Wildstone Notify Me','someone wants to be notified $email');
-    mail("chris@flixmedia.tv",'Wildstone Notify Me','someone wants to be notified $email');
+  mail("tom@brandandbusiness.com","Wildstone Notify Me','someone wants to be notified $email");
+    mail("chris@flixmedia.tv",'Wildstone Notify Me',"someone wants to be notified $email"");
   
 }
 ?>
