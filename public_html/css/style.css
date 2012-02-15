@@ -1,0 +1,59 @@
+html{overflow-y: scroll;}
+body{font-family: Arial, Helvetica, sans-serif; margin:0px; padding:0px; background:url(../images/bg.jpg) repeat-x left top;}
+
+/* ======================= Main Layout Styles =====================*/
+.wrapper{width:100%; margin:0px auto; position:relative; z-index:200;}
+
+/* ======================= Header Styles =====================*/
+.header_tp, .header_bt, .story_area, .contanier, .footer{width:100%; float:left;}
+.header_tp_in, .header_bt_in, .story_area_in, .contanier_in, .footer_in{width:930px; margin:0px auto;}
+
+/* ======================= Header Top Styles =====================*/
+
+.header_tp{}
+.header_tp_in{background:url(../images/header_img.png) no-repeat left top; height:379px;}
+.header_tp_in span{color:#fff;}
+
+/* ======================= Header Top Styles =====================*/
+
+.header_bt{background:#494949 url(../images/shadow.png) repeat-x left top; padding:180px 0px 22px 0px;}
+
+.header_bt_in_L{float:left; padding-top:70px; width:40%;}
+.header_bt_in_L h1{font-size:26px; color:#fff;}
+.header_bt_in_L h2{font-size:44px; color:#afb2b5;}
+
+.header_bt_in_R{float:right;width:16%;}
+
+/* ======================= Container Styles =====================*/
+.contanier{background:#fdfdfd}
+.contanier_in{padding:15px 0 15px 0;}
+
+/* ======================= Coming Soon page Styles =====================*/
+
+.coming_soon{padding:80px 0px 400px 0px;}
+
+/* ======================= Coming Soon page Left Area Styles =====================*/
+.coming_soon_L{float:left; color:#6e6f73; width:42%;}
+
+.coming_soon_L h1{font-size:14px; padding-bottom:20px;}
+
+.notify_me{float:left; padding-right:15px;}
+.notify_me_L{float:left; background:url(../images/notify_me_L.png) no-repeat left top; width:2px; height:31px;}
+.notify_me_C{float:left;}
+.notify_me_C input{float:left; border:0px; background:url(../images/notify_me_C.png) repeat-x left top; height:29px; padding:2px 0px 0px 5px;}
+
+.notify_me_R{float:left;background:url(../images/notify_me_R.png) no-repeat left top; width:9px; height:31px;}
+
+.coming_soon_L a{font-size:19px; float:left; margin-top:6px; color:#6e6f73;}
+.coming_soon_L p{font-size:11px; clear:both; padding-top:10px;}
+.coming_soon_L span{color:#434343;}
+
+
+/* ======================= Coming Soon page Left Area Styles =====================*/
+.coming_soon_R{float:right; color:#6e6f73; width:22%;}
+
+.coming_soon_R ul{margin:0px; padding:0px;}
+.coming_soon_R li{font-size:14px; color:#434343; padding-bottom:20px; float:left; clear:both;}
+.coming_soon_R li.last{padding:28px 0 0 0;}
+.coming_soon_R li a{color:#434343; float:left;}
+.coming_soon_R li span{font-weight:bold; padding-bottom:10px; float:left;}
