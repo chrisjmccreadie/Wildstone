@@ -4,6 +4,8 @@ if (isset($_GET["action"])) {
   $output = "You will be notified soon";
   $email = $_GET["email"];
   mail("tom@brandandbusiness.com",'Wildstone Notify Me','someone wants to be notified $email');
+    mail("chris@flixmedia.tv",'Wildstone Notify Me','someone wants to be notified $email');
+  
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
