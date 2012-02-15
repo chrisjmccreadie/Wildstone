@@ -1,3 +1,11 @@
+<?php
+$output = 'Please enter your email for launch notification:';
+if (isset($_GET["action"])) {
+  $output = "You will be notified soon";
+  $email = $_GET["email"];
+  mail("tom@brandandbusiness.com",'Wildstone Notify Me','someone wants to be notified $email');
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,6 +15,24 @@
 <!--[if lte IE 6]>
 <script type="text/javascript" src="js/supersleight-min.js"></script>
 <![endif]-->
+<script type="text/javascript">
+
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
+
+function submitform()
+{
+   email = form1.elements["email"].value;
+  result = validateEmail(email);
+   if (result == true)	
+  		document.form1.submit();
+	else
+		alert('Please enter a valid email address');
+}
+</script>
+
 </head>
 <body>
 <div class="wrapper"> 
@@ -35,24 +61,27 @@
      <!-- Coming Soon Left Area Starts from here -->
     <div class="coming_soon_L">
     
-    <h1>Fill in your email and we will notify you when we launch:</h1>
+    <h1><?php echo $output; ?></h1>
     <!-- Notify Me Starts from here -->
     <div class="notify_me">
     
     <div class="notify_me_L"></div>
     
     <div class="notify_me_C">
-     <input type="text" value="" onclick="this.value='';" onblur="this.value=!this.value?'':this.value;"/>
-    
+     <form name="form1" id="forn1" action="index.php">
+    <input type="hidden" name="action" value="doit">
+
+     <input name="email" id="email" type="text" value=""/>
+    </form> 
     </div>
    <div class="notify_me_R"></div>
     
     
     </div>
      <!-- Notify Me Ends from here -->
-    <a href="#" title="">Notify me</a>
+    <a href="javascript:submitform();" title="">Notify me</a>
     
-    <p><span>*</span> Don't worry, your details are safe with us.</p>
+    <!--<p><span>*</span> Don't worry, your details are safe with us.</p>-->
     </div>
     <!-- Coming Soon Left Area ends from here -->
     <!-- Coming Soon Right Area Starts from here -->
