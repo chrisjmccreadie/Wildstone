@@ -1,10 +1,10 @@
 <?php
 $output = 'Please enter your email for launch notification:';
 if (isset($_GET["action"])) {
-  $output = "You will be notified soon";
+  $output = "Thank you for registering your interest";
   $email = $_GET["email"];
-  mail("tom@brandandbusiness.com","Wildstone Notify Me','someone wants to be notified $email");
-    mail("chris@flixmedia.tv",'Wildstone Notify Me',"someone wants to be notified $email"");
+  mail("tom@brandandbusiness.com","Wildstone Notify Me","someone wants to be notified $email");
+    mail("chris@flixmedia.tv","Wildstone Notify Me","someone wants to be notified $email");
   
 }
 ?>
@@ -12,7 +12,7 @@ if (isset($_GET["action"])) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>::..Welcome to the Wild Stone Website..::</title>
+<title>Wildstone</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
 <!--[if lte IE 6]>
 <script type="text/javascript" src="js/supersleight-min.js"></script>
@@ -66,9 +66,7 @@ function submitform()
     <h1><?php echo $output; ?></h1>
     <!-- Notify Me Starts from here -->
     <div class="notify_me">
-    
     <div class="notify_me_L"></div>
-    
     <div class="notify_me_C">
      <form name="form1" id="forn1" action="index.php">
     <input type="hidden" name="action" value="doit">
@@ -92,9 +90,9 @@ function submitform()
     <ul>
     <li><span>Wildstone Property Limited</span>
     
-    <a href="#" title="">Email: damian@wildstone.co.uk</a></li>
-     <li><span>Wildstone Planning</span><a href="#" title="">Email: philip@wildstone.co.uk</a></li>
-      <li class="last"><span>Tel: 020 7313 9571</span><a href="#" title="">103 Freston Road, London, W11 4BD</a></li>
+    <a href="mailto:damin@wildstone.co.uk" title="">Email: damian@wildstone.co.uk</a></li>
+     <li><span>Wildstone Planning</span><a href="mailto:philip@wildstone.co.uk" title="">Email: philip@wildstone.co.uk</a></li>
+      <li class="last"><span>Tel: 020 7313 9571</span></li><li>103 Freston Road,<br/> London, W114BD</li>
     
     </ul>
     </div>
